@@ -20,5 +20,5 @@ app.listen(port, () => {
   console.log(`Server is running at ${port}`);
 })
 
-  
+export default app;
   

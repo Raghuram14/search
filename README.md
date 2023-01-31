@@ -59,3 +59,9 @@ To run this project, you will need to follow given instructions to set the envir
 ```bash
     npm start
 ```
+
+## Start Test
+
+```bash
+    npm test
+```
