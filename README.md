@@ -2,8 +2,6 @@
 
 This is a master repo containing API to search details of the provided parameters
 
-[TOC]
-
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for develope and testing purposes.
 

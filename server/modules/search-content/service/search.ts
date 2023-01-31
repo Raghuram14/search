@@ -1,8 +1,7 @@
 'use strict';
 
-import { Request } from "express"
 import { utils } from "../../../utils";
-
+import { getContentDetails } from "../models/search-content";
 const ValidationError = utils.ValidationError;
 
 /**
@@ -10,13 +9,23 @@ const ValidationError = utils.ValidationError;
  * @param {Request} req request details
  * @returns {Object} JSON with success and error response
  */
-export const getSearchDetails = async (req: Request) => {
+export const getSearchDetails = async (req: any) => {
     try {
-        const searchParam = req.params.searchParam;
+        // If search param is not found throw error
+        
+        let searchParam = req.searchParam;
         if (!searchParam)
             throw new ValidationError('Invalid search param');
+
+
+        // Find the params which has double quotation
+        const query = searchParam.match(/(?:"[^"]*"|^[^"]*$)/)[0].replace(/"/g, "");
+
+        // Get content details for the search param 
+        const response = getContentDetails(query);
+
         return ({
-            data: 'success',
+            data: response,
             error: null,
         })
     } catch (Error) {

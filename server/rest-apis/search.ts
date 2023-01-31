@@ -16,7 +16,7 @@ const logger = utils.logger;
  * @param {Request} req request details containing search param
  * @param {Response} res response
  */
-router.get('/:searchParam', (req: Request, res: Response) => {
+router.post('/', (req: Request, res: Response) => {
     try {
         return controllers.getSearchDetails(req, res);
     } catch (Error) {

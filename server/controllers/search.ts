@@ -10,6 +10,6 @@ import {utils} from '../utils';
  * @returns {Object} object with success and error response
  */
 export const getSearchDetails = async (req: Request, res: Response) => {
-    const result = await searchServices.getSearchDetails(req);     
+    const result = await searchServices.getSearchDetails(req.body);     
     return utils.resHanlder(res, result);
 }
