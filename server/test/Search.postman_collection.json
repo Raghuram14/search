@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "e33c0950-3fdb-4f05-8223-e31d113c71c1",
+		"name": "Search",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7474475"
+	},
+	"item": [
+		{
+			"name": "Search-API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"searchParam\": \"Customer \\\"aut omnis est\\\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/v0/search/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v0",
+						"search",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

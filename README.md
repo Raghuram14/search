@@ -65,3 +65,6 @@ To run this project, you will need to follow given instructions to set the envir
 ```bash
     npm test
 ```
+
+## Postman collection for reference
+You can find a sample postman collection for the search api in the folder server/test/
